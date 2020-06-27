@@ -1,12 +1,1 @@
-baseurl:
-url: http://www.estyle.com.cn
-date_format: "ordinal"
-title: "2048"
-timezone: Asia/Shanghai
-encoding: "utf-8"
 theme: jekyll-theme-midnight
-
-navs:
-  -
-    href: /
-    label: 首页
