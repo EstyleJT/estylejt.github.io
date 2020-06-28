@@ -19,7 +19,8 @@
       <ul>
         <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
         {% for page in site.pages %}
-          <li><a class="buttons github" href="{{site.url}}/{{page[1]}}.html" target="_top">{{page[0]}}</a></li>
+          {% assign p = page | split: "|" %}
+          <li><a class="buttons github" href="{{site.url}}/{{p[1]}}.html" target="_top">{{p[0]}}</a></li>
         {% endfor %}
       </ul>
       
