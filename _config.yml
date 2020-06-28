@@ -1,5 +1,4 @@
 title: "Estyle's"
 name: "Estyle's"
 theme: jekyll-theme-dinky
-en_pages: ["2048 Game|2048","Training|training","Resume|resume"]
-cn_pages: ["2048游戏|2048","培训|training","简历|resume"]
+pages: ["2048 Game|2048","Training|training","Resume|resume"]
