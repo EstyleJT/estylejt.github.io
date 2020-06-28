@@ -18,8 +18,8 @@
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
       <ul>
         <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
-        {% for page_name in site.page_names %}
-          <li><a class="buttons github" href="{{site.url}}/{{page_name}}.html" target="_top">{{page_name}}</a></li>
+        {% for page in site.pages %}
+          <li><a class="buttons github" href="{{site.url}}/{{page[1]}}.html" target="_top">{{page[0]}}</a></li>
         {% endfor %}
       </ul>
       
