@@ -17,10 +17,10 @@
         <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
       <ul>
-        <li><a class="buttons github" style="display:inline-block;" href="{{site.url}}" target="_top">Home</a></li>
+        <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
         {% for defined_page in site.defined_pages %}
           {% assign page_arr = defined_page | split: "," %}
-          <li><a class="buttons github" style="display:inline-block;" href="{{site.url}}/{{page_arr[1]}}.html" target="_top">{{page_arr[0]}}</a></li>
+          <li><a class="buttons github" href="{{site.url}}/{{page_arr[1]}}.html" target="_top">{{page_arr[0]}}</a></li>
         {% endfor %}
       </ul>
       
