@@ -18,7 +18,7 @@
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
       <ul>
         <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
-        {% for page_name_and_filename in site.pages %}
+        {% for page_name_and_filename in site.defined_pages %}
           {% assign pnaf = page_name_and_filename | split: "," %}
           <li><a class="buttons github" href="{{site.url}}/{{pnaf[1]}}.html" target="_top">{{pnaf[0]}}</a></li>
         {% endfor %}
