@@ -19,8 +19,8 @@
       <ul>
         <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
         {% for defined_page in site.defined_pages %}
-          {% assign defined_page_array = defined_page | split: "," %}
-          <li><a class="buttons github" href="{{site.url}}/{{defined_page_array[1]}}.html" target="_top">{{defined_page_array[0]}}</a></li>
+          {% assign page_arr = defined_page | split: "," %}
+          <li><a class="buttons github" href="{{site.url}}/{{page_arr[1]}}.html" target="_top">{{page_arr[0]}}</a></li>
         {% endfor %}
       </ul>
       
