@@ -1,2 +1,1 @@
-# training program
-还没想好怎么写
+to be working on
