@@ -22,11 +22,8 @@
           {% assign page_arr = defined_page | split: "," %}
           <li><a class="buttons github" href="{{site.url}}/{{page_arr[1]}}.html" target="_top">{{page_arr[0]}}</a></li>
         {% endfor %}
+        <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
       </ul>
-      <ul>
-            <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
-      </ul>
-      
       </header>
 
       <section>
