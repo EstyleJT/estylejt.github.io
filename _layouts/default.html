@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="en-US">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,19 +10,39 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script>
+      var lang_string={}
+      lang_string["h1_title")="Estyle's"
+      lang_string["link_home")="Home"
+      lang_string["link_2048")="2048 Game EX"
+      lang_string["link_training")="Training Program"
+      lang_string["link_resume")="Resume"
+      if(window.navigator.language!=null){
+        if(["zh","zh-cn"].indexOf(window.navigator.language.toLowerCase())!=-1){
+          lang_string["link_home")="首页"
+          lang_string["link_2048")="2048游戏扩展版"
+          lang_string["link_training")="培训项目"
+          lang_string["link_resume")="简历"
+        }
+      window.addEventListener("pageshow",function(event){
+        for(var idx in lang_string){
+          var html_obj=document.getElementById(idx)
+          if(html_obj!=null&&html_obj.textContent!=null){
+            html_obj.textContent=lang_string[idx]
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
-        <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
+        <h1 class="header" id="h1_title">Estyle's</h1>
       <ul>
-        <li><a class="buttons github" href="{{site.url}}" target="_top">Home</a></li>
-        {% for defined_page in site.defined_pages %}
-          {% assign page_arr = defined_page | split: "," %}
-          <li><a class="buttons github" href="{{site.url}}/{{page_arr[1]}}.html" target="_top">{{page_arr[0]}}</a></li>
-        {% endfor %}
-        {% comment %}<li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>{% endcomment %}
+        <li><a class="buttons github" href="/" target="_top" id="link_home">Home</a></li>
+        <li><a class="buttons github" href="/2048.html" target="_top" id="link_2048">2048 Game EX</a></li>
+        <li><a class="buttons github" href="/training.html" target="_top" id="link_training">Training Program</a></li>
+        <li><a class="buttons github" href="/resume.html" target="_top" id="link_resume">Resume</a></li>
       </ul>
       </header>
 
