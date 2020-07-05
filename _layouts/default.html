@@ -24,7 +24,7 @@
           lang_string["link_training")="培训项目"
           lang_string["link_resume")="简历"
         }
-      window.addEventListener("pageshow",function(event){
+      window.addEventListener("load",function(event){
         for(var idx in lang_string){
           var html_obj=document.getElementById(idx)
           if(html_obj!=null&&html_obj.textContent!=null){
