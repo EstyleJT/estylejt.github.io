@@ -10,34 +10,6 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script>
-      var need_change_lang=false
-      var lang_string={}
-      lang_string["h1_title"]="Estyle's"
-      lang_string["link_home"]="Home"
-      lang_string["link_2048"]="2048 Game EX"
-      lang_string["link_training"]="Training Program"
-      lang_string["link_resume"]="Resume"
-      if(window.navigator.language!=null){
-        if(["zh","zh-cn"].indexOf(window.navigator.language.toLowerCase())!=-1){
-          need_change_lang=true
-          lang_string["link_home"]="首页"
-          lang_string["link_2048"]="2048游戏扩展版"
-          lang_string["link_training"]="培训项目"
-          lang_string["link_resume"]="简历"
-        }
-      }
-      window.addEventListener("DOMContentLoaded",function(event){
-        if(need_change_lang){
-          for(var idx in lang_string){
-            var html_obj=document.getElementById(idx)
-            if(html_obj!=null&&html_obj.textContent!=null){
-              html_obj.textContent=lang_string[idx]
-            }
-          }
-        }
-      })
-    </script>
   </head>
   <body>
     <div class="wrapper">
